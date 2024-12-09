@@ -1,0 +1,106 @@
+/* .experience__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+} */
+.experience__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* لجعل العنصر في المنتصف بشكل عمودي */
+    gap: 2rem;
+}
+
+.experience__container>div {
+    width: 90%;
+    background: var(--color-bg-variant);
+    /* padding: 2.4rem 5rem; */
+    padding: 3rem 6rem;
+    border-radius: 2rem;
+    border: 2px solid transparent;
+    transition: var(--transition);
+    transform: scale(1.1);
+}
+
+.experience__container>div:hover {
+    background: transparent;
+    border-color: var(--color-bg-variant);
+    cursor: pointer;
+}
+
+.experience__container>div h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-primary);
+}
+
+.experince__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+}
+
+.experince__details {
+    display: flex;
+    gap: 1rem;
+}
+
+.experince__details-icon {
+    margin-top: 6px;
+    color: var(--color-primary);
+}
+
+
+/* Media Queries Meduim devices  */
+/**
+@media screen and (max-width: 1024px) {
+    .experience__container {
+        grid-template-columns: 1fr;
+    }
+
+    .experience__container>div {
+        width: 80%;
+        padding: 2rem;
+        margin: 0 auto;
+    }
+
+    .experince__content {
+        padding: 1rem;
+    }
+}
+    */
+
+/* Media Queries Small devices  */
+/**
+@media screen and (max-width: 600px) {
+    .experience__container {
+        gap: 1rem;
+    }
+
+    .experience__container>div {
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+}
+    */
+
+@media screen and (max-width: 1024px) {
+    .experience__container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .experience__container>div {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .experience__container>div {
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+}
